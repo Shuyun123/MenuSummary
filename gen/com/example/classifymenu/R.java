@@ -22,10 +22,53 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int diannao=0x7f020000;
+        public static final int dianqi=0x7f020001;
+        public static final int haixian=0x7f020002;
+        public static final int huazhuang=0x7f020003;
+        public static final int ic_category_10=0x7f020004;
+        public static final int ic_category_20=0x7f020005;
+        public static final int ic_category_30=0x7f020006;
+        public static final int ic_category_40=0x7f020007;
+        public static final int ic_category_45=0x7f020008;
+        public static final int ic_category_50=0x7f020009;
+        public static final int ic_category_55=0x7f02000a;
+        public static final int ic_category_60=0x7f02000b;
+        public static final int ic_category_65=0x7f02000c;
+        public static final int ic_category_70=0x7f02000d;
+        public static final int ic_category_80=0x7f02000e;
+        public static final int ic_category_85=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int jiaju=0x7f020011;
+        public static final int liangbantuan=0x7f020012;
+        public static final int lvxing=0x7f020013;
+        public static final int meishi=0x7f020014;
+        public static final int menu_1_3=0x7f020015;
+        public static final int menu_7=0x7f020016;
+        public static final int muying=0x7f020017;
+        public static final int nanzhuang=0x7f020018;
+        public static final int neiyi=0x7f020019;
+        public static final int nvxie=0x7f02001a;
+        public static final int nvzhuang=0x7f02001b;
+        public static final int qingqu=0x7f02001c;
+        public static final int shechipin=0x7f02001d;
+        public static final int shipin=0x7f02001e;
+        public static final int shouji=0x7f02001f;
+        public static final int shuji=0x7f020020;
+        public static final int tazaimai=0x7f020021;
+        public static final int tejia=0x7f020022;
+        public static final int tongzhuang=0x7f020023;
+        public static final int wanju=0x7f020024;
+        public static final int yingshi=0x7f020025;
+        public static final int yiyong=0x7f020026;
+        public static final int zhongbiao=0x7f020027;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f080004;
+        public static final int expandableGridView=0x7f080003;
+        public static final int expandableListView=0x7f080002;
+        public static final int grid=0x7f080001;
+        public static final int list=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
