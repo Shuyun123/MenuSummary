@@ -17,6 +17,12 @@ import com.example.classifymenu.R;
 import com.example.classifymenu.adapter.ClassifyMainAdapter;
 import com.example.classifymenu.adapter.ClassifyMoreAdapter;
 
+/**
+ * @author anumbrella
+ * 
+ * @date 2015-7-31
+ * 
+ */
 public class ListListViewActivity extends Activity {
 
 	private ClassifyMainAdapter classifyMainAdapter;
@@ -55,11 +61,50 @@ public class ListListViewActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
-				
+				// 主目录一位数组的大小和侧目录二维数组的行的数目是一致的
+				// 点击传入二维数组的一行的数据
+				inintAdapter(DataModel.MORELISTVIEWTXT[position]);
+				// 设置选中的选的id
+				classifyMainAdapter.setSelectItem(position);
+				// 更新数据的变更
+				classifyMainAdapter.notifyDataSetChanged();
+
+			}
+
+		});
+
+		/**
+		 * CHOICE_MODE_NONE是普通模式， CHOICE_MODE_SINGLE是单选模式，不常用，
+		 * CHOICE_MODE_MULTIPLE和CHOICE_MODE_MULTIPLE_MODAL都是多选模式
+		 * 
+		 * 设置选着的模式
+		 * */
+		mainlist.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+		// 设置还没有点击时默认的显示页面的内容
+		inintAdapter(DataModel.MORELISTVIEWTXT[0]);
+
+		// 设置详细列表的点击事件处理逻辑
+		morelist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				classifyMoreAdapter.setSelectItem(position);
+				classifyMoreAdapter.notifyDataSetChanged();
 
 			}
 		});
 
+	}
+
+	// 为侧目录(详细目录)进行数据的匹配处理
+	private void inintAdapter(String[] array) {
+		// TODO Auto-generated method stub
+		classifyMoreAdapter = new ClassifyMoreAdapter(this, array);
+		morelist.setAdapter(classifyMoreAdapter);
+		classifyMoreAdapter.notifyDataSetChanged();
 	}
 
 	// 初始化化数据的设定（String在java中为对象存储的,不是基本的常量）

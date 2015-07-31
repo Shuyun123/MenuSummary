@@ -8,6 +8,7 @@ package com.example.classifymenu;
 public class DataModel {
 
 	// 第一个listView的图片资源数组(12张图片)
+
 	public static int[] LISTVIEWIMG = new int[] { R.drawable.ic_category_10,
 			R.drawable.ic_category_20, R.drawable.ic_category_30,
 			R.drawable.ic_category_40, R.drawable.ic_category_45,

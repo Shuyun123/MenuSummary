@@ -64,17 +64,24 @@ public final class R {
         public static final int zhongbiao=0x7f020027;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
+        public static final int action_settings=0x7f08000b;
         public static final int expandableGridView=0x7f080003;
         public static final int expandableListView=0x7f080002;
         public static final int grid=0x7f080001;
         public static final int list=0x7f080000;
-        public static final int main_view=0x7f080004;
-        public static final int more_view=0x7f080005;
+        public static final int mainItem_img=0x7f080005;
+        public static final int mainItem_txt=0x7f080006;
+        public static final int mainList_layout=0x7f080004;
+        public static final int main_view=0x7f080009;
+        public static final int moreItem_layout=0x7f080007;
+        public static final int moreItem_text=0x7f080008;
+        public static final int more_view=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int listlistview_layout=0x7f030001;
+        public static final int item_classify_mainlist=0x7f030001;
+        public static final int item_classify_morelist=0x7f030002;
+        public static final int listlistview_layout=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -108,7 +115,6 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
     }
