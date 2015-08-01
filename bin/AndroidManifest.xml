@@ -24,6 +24,8 @@
         </activity>
         <activity android:name="com.example.classifymenu.view.ListListViewActivity" >
         </activity>
+        <activity android:name="com.example.classifymenu.view.ListGridViewActivity" >
+        </activity>
     </application>
 
 </manifest>

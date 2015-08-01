@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.classifymenu.DataModel;
 import com.example.classifymenu.R;
@@ -30,6 +31,8 @@ public class ListListViewActivity extends Activity {
 	private List<Map<String, Object>> mainList;
 	private ListView mainlist;
 	private ListView morelist;
+	
+	private int mainSelectPostion = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,7 @@ public class ListListViewActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
+				mainSelectPostion = position;
 				// 主目录一位数组的大小和侧目录二维数组的行的数目是一致的
 				// 点击传入二维数组的一行的数据
 				inintAdapter(DataModel.MORELISTVIEWTXT[position]);
@@ -91,9 +95,13 @@ public class ListListViewActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
+
 				classifyMoreAdapter.setSelectItem(position);
 				classifyMoreAdapter.notifyDataSetChanged();
 
+				Toast.makeText(getApplicationContext(),
+						"你点击的是" + DataModel.MORELISTVIEWTXT[mainSelectPostion][position],
+						Toast.LENGTH_SHORT).show();
 			}
 		});
 
