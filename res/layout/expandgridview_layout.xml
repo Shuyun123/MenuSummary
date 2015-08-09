@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/expandableGridView_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dip"
+        android:background="#ef56cb" >
+
+        <ImageView
+            android:id="@+id/expandableGridView_back"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dip"
+            android:background="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/expandableGridView_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ExpandableGridView"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ExpandableListView
+            android:id="@+id/ExpandableGridView_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:childDivider="#c8c7cc"
+            android:divider="@null"
+            android:dividerHeight="1px"
+            android:groupIndicator="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none" >
+        </ExpandableListView>
+    </LinearLayout>
+
+</LinearLayout>
