@@ -14,6 +14,7 @@ import android.widget.Button;
  *
  * @date 2015-8-1
  *
+ * app的启动入口
  */
 public class MainActivity extends Activity implements OnClickListener {
 

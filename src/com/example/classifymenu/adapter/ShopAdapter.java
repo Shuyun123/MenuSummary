@@ -33,7 +33,7 @@ public class ShopAdapter extends FragmentPagerAdapter {
 		// TODO Auto-generated method stub
 		Fragment fragment = new TypeFragment();
 		Bundle bundle = new Bundle();
-		// 把选中的index指针出入过去
+		// 把选中的index指针传入过去
 		bundle.putInt("index", index);
 		// 设定在fragment当中去
 		fragment.setArguments(bundle);

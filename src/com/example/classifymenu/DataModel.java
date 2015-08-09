@@ -66,16 +66,32 @@ public class DataModel {
 			R.drawable.shouji, R.drawable.shipin, R.drawable.yingshi,
 			R.drawable.muying, R.drawable.qingqu, R.drawable.haixian,
 			R.drawable.shechipin, R.drawable.jiaju, R.drawable.lvxing };
-	// 父listView的图片资源数组(4)
+	// 父目录ExpandableListView的图片资源数组(4)
 	public static int[] EXPANDABLE_LISTVIEW_IMG = new int[] {
 			R.drawable.ic_category_40, R.drawable.ic_category_10,
 			R.drawable.ic_category_20, R.drawable.ic_category_85 };
 
-	// 父listview的文本数据数组(14)
+	// 父目录ExpandleableListView的文本数据数组(4)
+	public static String[] EXPANDABLE_LISTVIEW_TXT = new String[] { "热门分类",
+			"美食", "购物", "家装" };
+
+	// 子目录ExpandleableListView的文本数据数组(4,4)
+	public static String[][] EXPANDABLE_MORELISTVIEW_TXT = new String[][] {
+			{ "全部分类", "小吃快餐", "咖啡厅", "电影院", "KTV", "茶馆", "足疗按摩", "超市/便利店",
+					"银行", "经济型酒店", "景点/郊游", "公园", "美发" },
+			{ "全部美食", "小吃快餐", "西餐", "火锅", "北京菜", "川菜", "日本", "面包甜点", "粤菜",
+					"韩国料理", "自助餐", "浙江菜", "云南菜", "湘菜", "东南亚菜", "西北菜", "鲁菜",
+					"东北菜", "素菜", "新疆菜", "海鲜", "清真菜", "贵州菜", "湖北菜", "其他" },
+			{ "全部购物", "综合商场", "服饰鞋包", "超市/便利店", "特色集市", "品牌折扣店", "眼镜店", "珠宝饰品",
+					"化妆品", "运动户外", "食品茶酒", "书店", "数码产品", "药店", "京味儿购物", "亲子购物",
+					"花店", "家具建材", "更多购物场所" },
+			{ "全部家装", "家具家装", "家用电器", "建材", "家装卖场", "装修设计" } };
+
+	// 父目录ExpandableGridView的文本数据数组(14)
 	public static String[] EXPANDABLE_GRIDVIEW_TXT = new String[] { "新闻", "军事",
 			"微博", "体育", "娱乐", "财经", "视频", "科技", "图片", "房产", "汽车", "教育", "历史",
 			"女性" };
-	// 子listview的文本数据(14,..)
+	// 子目录ExpandableGridView的文本数据(14,..)
 	public static String[][] EXPANDABLE_MOREGRIDVIEW_TXT = {
 			{ "国内", "社会", "国际", "评论", "传媒", "排行", "视频", "滚动", "调查", "搜索", "航空",
 					"直播" },
