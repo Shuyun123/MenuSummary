@@ -7,7 +7,10 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ImageView;
 
 import com.example.classifymenu.DataModel;
@@ -40,6 +43,9 @@ public class ExpandAbleGridViewActivity extends Activity {
 	 */
 	private String[][] textArray;
 
+	// 展开的标志信息
+	private int sign = -1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +65,41 @@ public class ExpandAbleGridViewActivity extends Activity {
 	 */
 	private void setListener() {
 		// TODO Auto-generated method stub
+		expandableGridView.setOnGroupClickListener(new OnGroupClickListener() {
+
+			@Override
+			public boolean onGroupClick(ExpandableListView parent, View v,
+					int groupPosition, long id) {
+				// TODO Auto-generated method stub
+				if (sign == -1) {
+					// 选择展开的项
+					expandableGridView.expandGroup(groupPosition);
+					// 将展开的项置于顶端
+					expandableGridView.setSelectedGroup(groupPosition);
+					sign = groupPosition;
+
+				} else if (sign == groupPosition) {
+					// 如果已近展开,则将其折叠
+					expandableGridView.collapseGroup(groupPosition);
+					sign = -1;
+				} else {
+					// 点击其他选项之前，先将之前的关闭掉
+					expandableGridView.collapseGroup(sign);
+					expandableGridView.expandGroup(groupPosition);
+					sign = groupPosition;
+				}
+				return true;
+			}
+		});
+
+		imageView.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
 
 	}
 
@@ -75,7 +116,6 @@ public class ExpandAbleGridViewActivity extends Activity {
 		}
 		adapter = new ExpandableGridAdapter(this, list, textArray);
 		expandableGridView.setAdapter(adapter);
-
 	}
 
 }

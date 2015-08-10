@@ -28,6 +28,8 @@
         </activity>
          <activity android:name="com.example.classifymenu.view.ExpandableListViewActivity" >
         </activity>
+         <activity android:name="com.example.classifymenu.view.ExpandAbleGridViewActivity" >
+        </activity>
     </application>
 
 </manifest>
