@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/milk_white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dip"
+        android:padding="8dip">
+
+        <Button
+            android:id="@+id/classifyMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分类菜单"
+            android:textColor="@color/textColor_black"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
