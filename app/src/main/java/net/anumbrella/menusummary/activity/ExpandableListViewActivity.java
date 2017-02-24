@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import net.anumbrella.menusummary.R;
 import net.anumbrella.menusummary.adapter.ExpandableListAdapter;
@@ -42,13 +43,13 @@ public class ExpandableListViewActivity extends AppCompatActivity {
 
 
     @BindView(R.id.expandlelist_back)
-    ImageView backImage;
+    LinearLayout backImage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expandlistview_layout);
+        setContentView(R.layout.activity_expandlistview_layout);
         ButterKnife.bind(this);
         textArray = Config.EXPANDABLE_MORELISTVIEW_TXT;
 

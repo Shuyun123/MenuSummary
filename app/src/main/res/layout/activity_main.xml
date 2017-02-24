@@ -2,24 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/milk_white">
+    android:background="@color/milk_white"
+    android:orientation="vertical">
 
 
-    <LinearLayout
+    <Button
+        android:id="@+id/classifyMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dip"
-        android:padding="8dip">
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="10dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:text="分类菜单"
+        android:textColor="@color/textColor_black"
+        android:textSize="@dimen/text_size_18sp" />
 
-        <Button
-            android:id="@+id/classifyMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="分类菜单"
-            android:textColor="@color/textColor_black"
-            android:textSize="@dimen/text_size_18sp" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/SwipeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="10dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:text="仿QQ滑动删除菜单"
+        android:textColor="@color/textColor_black"
+        android:textSize="@dimen/text_size_18sp" />
 
 
 </LinearLayout>

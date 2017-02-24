@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import net.anumbrella.menusummary.R;
 import net.anumbrella.menusummary.adapter.ExpandableGridAdapter;
@@ -45,12 +46,12 @@ public class ExpandableGridViewActivity extends AppCompatActivity {
 
 
     @BindView(R.id.expandableGridView_back)
-    ImageView backImage;
+    LinearLayout backImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expandgridview_layout);
+        setContentView(R.layout.activity_expandgridview_layout);
         ButterKnife.bind(this);
         textArray = Config.EXPANDABLE_MOREGRIDVIEW_TXT;
 

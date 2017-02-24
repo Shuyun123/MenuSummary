@@ -15,9 +15,6 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.classifyMenu)
-    Button BtnClassifyMenu;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +22,14 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.classifyMenu})
+    @OnClick({R.id.classifyMenu,R.id.SwipeMenu})
     public void click(View view){
         switch (view.getId()){
             case R.id.classifyMenu:
                 startActivity(ClassifyMenuActivity.class);
+                break;
+            case R.id.SwipeMenu:
+                startActivity(SwipeMenuActivity.class);
                 break;
         }
     }

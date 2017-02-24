@@ -27,20 +27,17 @@ public class SwipeMenuItem {
     private int width;
 
 
+    public SwipeMenuItem(Context context) {
+        this.mContext = context;
+    }
+
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Context getmContext() {
-        return mContext;
-    }
-
-    public void setmContext(Context mContext) {
-        this.mContext = mContext;
     }
 
     public String getTitle() {
@@ -51,12 +48,20 @@ public class SwipeMenuItem {
         this.title = title;
     }
 
+    public void setTitle(int resId) {
+        setTitle(mContext.getString(resId));
+    }
+
     public Drawable getIcon() {
         return icon;
     }
 
     public void setIcon(Drawable icon) {
         this.icon = icon;
+    }
+
+    public void setIcon(int resId) {
+        setIcon(mContext.getResources().getDrawable(resId));
     }
 
     public Drawable getBackground() {
@@ -67,12 +72,8 @@ public class SwipeMenuItem {
         this.background = background;
     }
 
-    public int getTitleSize() {
-        return titleSize;
-    }
-
-    public void setTitleSize(int titleSize) {
-        this.titleSize = titleSize;
+    public void setBackground(int resId) {
+        setBackground(mContext.getResources().getDrawable(resId));
     }
 
     public int getTitleColor() {
@@ -81,6 +82,14 @@ public class SwipeMenuItem {
 
     public void setTitleColor(int titleColor) {
         this.titleColor = titleColor;
+    }
+
+    public int getTitleSize() {
+        return titleSize;
+    }
+
+    public void setTitleSize(int titleSize) {
+        this.titleSize = titleSize;
     }
 
     public int getWidth() {

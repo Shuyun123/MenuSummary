@@ -3,21 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#efeff4"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/expandableGridView_header"
         android:layout_width="match_parent"
         android:layout_height="56dip"
-        android:background="#ef56cb" >
+        android:background="#ef56cb">
 
-        <ImageView
+        <LinearLayout
             android:id="@+id/expandableGridView_back"
-            android:layout_width="20dip"
-            android:layout_height="20dip"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dip"
-            android:background="@mipmap/icon_back" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dip"
+                android:background="@mipmap/icon_back" />
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/expandableGridView_text"
@@ -32,7 +40,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ExpandableListView
             android:id="@+id/ExpandableGridView_list"
@@ -43,8 +51,7 @@
             android:dividerHeight="1px"
             android:groupIndicator="@null"
             android:listSelector="#00000000"
-            android:scrollbars="none" >
-        </ExpandableListView>
+            android:scrollbars="none"></ExpandableListView>
     </LinearLayout>
 
 </LinearLayout>

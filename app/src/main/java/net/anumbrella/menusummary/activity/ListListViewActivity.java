@@ -48,7 +48,7 @@ public class ListListViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listlistview_layout);
+        setContentView(R.layout.activity_listlistview_layout);
         ButterKnife.bind(this);
         initModelData();
         initView();
