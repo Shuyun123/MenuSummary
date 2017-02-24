@@ -1,1 +1,1 @@
-include ':app', ':swipemenulibrary'
+include ':demo', ':swipemenulibrary'
